@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>Recommendation Letter Generator</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='university.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <img src="{{ url_for('static', filename='university.png') }}" class="icon" />
+  <h3>Who are you recommending?</h3>
+  <form action="/" method="post">
+    <input type="text" name="name" placeholder="Enter a name" required />
+    <input type="text" name="role" placeholder="Enter a position (e.g., fellowship)" required />
+    <input type="text" name="field" placeholder="Enter a field (e.g., psychology)" required />
+    <input type="submit" value="Generate letter" />
+  </form>
+  {% if result %}
+  <div class="result">{{ result }}</div>
+  {% endif %}
+</body>
