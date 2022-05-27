@@ -27,14 +27,18 @@ body {
   padding-top: 60px;
 }
 .icon {
-  width: 34px;
+  width: 48px;
 }
 h3 {
   font-size: 32px;
-  line-height: 40px;
   font-weight: bold;
   color: #202123;
-  margin: 16px 0 40px;
+  margin: 32px 0 0 0;
+}
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #202123;
 }
 form {
   display: flex;
@@ -61,8 +65,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 .result {
-  font-weight: bold;
   margin-top: 40px;
-  margin-right: 80px;
-  margin-left: 80px;
+  max-width: 750px;
 }

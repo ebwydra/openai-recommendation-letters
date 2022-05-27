@@ -10,7 +10,8 @@
 
 <body>
   <img src="{{ url_for('static', filename='university.png') }}" class="icon" />
-  <h3>Who are you recommending?</h3>
+  <h3>Recommendation Letter Generator</h3>
+  <h4>Powered by <a href="https://beta.openai.com/overview">OpenAI</a></h4>
   <form action="/" method="post">
     <input type="text" name="name" placeholder="Enter a name" required />
     <input type="text" name="role" placeholder="Enter a position (e.g., fellowship)" required />
@@ -18,6 +19,11 @@
     <input type="submit" value="Generate letter" />
   </form>
   {% if result %}
-  <div class="result">{{ result }}</div>
+    <!--  <div class="result">{{ result }}</div> -->
+    <div class="result">
+    {% for para in result %}
+      <p>{{para}}</p>
+    {% endfor %}
+  </div>
   {% endif %}
 </body>
