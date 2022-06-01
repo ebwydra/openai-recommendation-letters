@@ -9,14 +9,14 @@
 </head>
 
 <body>
-  <img src="{{ url_for('static', filename='university.png') }}" class="icon" />
+  <a href="/"><img src="{{ url_for('static', filename='university.png') }}" class="icon" /></a>
   <h3>Recommendation Letter Generator</h3>
   <h4>Powered by <a href="https://openai.com/api/">OpenAI</a></h4>
   <form action="/" method="post">
     <input type="text" name="name" placeholder="Enter a name" required />
     <input type="text" name="role" placeholder="Enter a position (e.g., fellowship)" required />
     <input type="text" name="field" placeholder="Enter a field (e.g., psychology)" required />
-    <input type="submit" value="Generate letter" />
+    <input type="submit" value="Write that letter!" />
   </form>
   {% if result %}
     <div class="result">
